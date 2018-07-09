@@ -1,0 +1,17 @@
+<form class="example-form" [formGroup]="insertForm" (submit)="onSubmit(insertForm)" novalidate>
+  <mat-form-field class="example-field">
+    <input formControlName="data" matInput placeholder="Data">
+  </mat-form-field>
+  <div *ngIf="insertForm.controls.data.invalid && (insertForm.controls.data.dirty || insertForm.controls.data.touched)" class="alert alert-danger">
+    <div class="error mat-body-2" *ngIf="insertForm.controls.data.errors.required">
+      You must fill out your data
+    </div>
+    <div class="error mat-body-2" *ngIf="insertForm.controls.data.errors.pattern">
+      You must provide data between 1 and 10 alphanumeric characters
+    </div>
+  </div>
+  <button mat-raised-button color="primary" type="submit" [disabled]="insertForm.invalid">Insert</button>
+</form>
+<div [style.display]="isOn ? 'block' : 'none'" id="overlay" (click)="onClick()">
+  <div id="text">{{results}}</div>
+</div>

@@ -1,0 +1,51 @@
+@media screen and (min-width: 320px) and (max-width: 736px) {
+  .example-form {
+    width: 80vw !important;
+  }
+  .example-field {
+    width: 80vw !important;
+  }
+}
+
+@media screen and (min-width: 737px) and (max-width: 1024px) {
+  .example-form {
+    width: 30vw !important;
+  }
+  .example-field {
+    width: 30vw !important;
+  }
+}
+
+.example-form {
+  width: 20vw;
+  margin: auto;
+}
+
+.example-field {
+  width: 20vw;
+  margin-bottom: 4%;
+}
+
+#overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  cursor: pointer;
+}
+
+#text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 50px;
+  color: white;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
