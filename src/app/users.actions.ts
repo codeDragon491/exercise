@@ -11,10 +11,10 @@ export class UsersActions {
     static RECEIVED_DATA: string = 'RECEIVED_DATA';
     static FAILED_RECEIVED_DATA: string = 'FAILED_RECEIVED_DATA';
 
-    getData(arg): void {
+    getData(val): void {
         this.ngRedux.dispatch({
             type: UsersActions.GET_DATA,
-            payload: arg
+            payload: data
         });
     }
 }
