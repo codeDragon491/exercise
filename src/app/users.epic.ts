@@ -15,7 +15,7 @@ export class UsersEpic {
 
     getData = (action$: ActionsObservable<any>) => {
         return action$.ofType(UsersActions.GET_DATA) // Listen for this action
-            .mergeMap(({ payload }) => { // payload: ( val1: "" ): When this action is activated, call ws through service class
+            .mergeMap(({ payload }) => { // when this action is activated, call ws through service class
                 return this.dataService.getData(payload)
                     .map((result) => ({ // when web service responds with success, call this action with payload that came back from webservice
                         type: UsersActions.RECEIVED_DATA,
