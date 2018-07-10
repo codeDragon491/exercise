@@ -23,8 +23,8 @@ export class InsertDataComponent implements OnInit, OnDestroy {
   onSubmit(insertForm) {
     //console.log("is Valid?: " + insertForm.valid);
     if (insertForm.valid) {
-      let arg: Number = insertForm.value
-      this.usersActions.getData(arg);
+      let val: Number = insertForm.value
+      this.usersActions.getData(val);
       this.isOn = true;
     } else {
       // Display error messages.
