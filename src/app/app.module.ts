@@ -26,6 +26,7 @@ import { InsertDataComponent } from './insert-data/insert-data.component';
 /************************************************************************ */
 
 import { DataService } from './data.service';
+import { Data } from './data';
 
 /************************************************************************ */
 
@@ -50,6 +51,7 @@ import { DataService } from './data.service';
   ],
   providers: [
     DataService,
+    Data
     UsersActions,
     UsersEpic,
   ],
