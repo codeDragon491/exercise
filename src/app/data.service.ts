@@ -6,7 +6,7 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class DataService {
   person;
-  val3;
+  facility;
   apiUrl1: string = 'http://localhost:3000/person/?';
   apiUrl2: string = 'http://localhost:3000/facility/?';
   apiUrl3: string = 'http://localhost:3000/exposure/?';
@@ -18,11 +18,11 @@ export class DataService {
       .map((response: any) =>
         this.person = response
       )
-      .flatMap((response: any) => this.http.get(this.apiUrl2 + this.person.val1)
+      .flatMap((response: any) => this.http.get(this.apiUrl2 + response.val1)
         .map((response: any) => {
-          this.val3 = response.val3
+          this.facility = response
         })
         .flatMap((response: any) => this.http.get(this.apiUrl3 + this.person.val2)
-          .map((response: any) => response.val5 * this.val3)))
+          .map((response: any) => response.val5 * this.facility.val3)))
   }
 }
