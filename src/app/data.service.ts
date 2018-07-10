@@ -22,7 +22,7 @@ export class DataService {
         .map((response: any) => {
           this.facility = response
         })
-        .flatMap((response: any) => this.http.get(this.apiUrl3 + this.person.val2)
+        .flatMap(() => this.http.get(this.apiUrl3 + this.person.val2)
           .map((response: any) => response.val5 * this.facility.val3)))
   }
 }
