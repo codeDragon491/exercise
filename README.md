@@ -8,7 +8,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 ## Running the json-server 
 
-Run the json-server in a terminal and launch the JSON file.
+Run the json-server in a terminal and launch the JSON file. Make sure you are in the directory, where your JSON file is located.
 `json-server --watch myJSONfile.json`
 
 ## Code scaffolding
