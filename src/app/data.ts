@@ -28,8 +28,8 @@ export class Data {
 
     constructor() { }
 
-    public createPerson(arg) {
-        this.person.push(arg)
+    public createPerson(val: any) {
+        this.person.push(val)
         return of(this.person[0].response)
     }
     public getFacility(val1: Number) {
