@@ -10,7 +10,6 @@ import { IAppState } from './store/store';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  title = 'App';
 
   constructor(private usersActions: UsersActions, private ngRedux: NgRedux<IAppState>) { }
 
