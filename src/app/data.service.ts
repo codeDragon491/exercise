@@ -7,7 +7,7 @@ import 'rxjs/add/operator/map';
 
 @Injectable()
 
-export class UsersService {
+export class DataService {
 
   constructor(private http: HttpClient, private data: Data) { }
 
