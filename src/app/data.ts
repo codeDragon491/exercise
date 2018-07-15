@@ -13,14 +13,16 @@ export class Data {
         }
     }];
     facility = [
-        { val1: 1 }, {
+        {
+            val1: 1,
             response: {
                 val3: 3,
                 val4: 4
             }
         }];
     exposure = [
-        { val2: 2 }, {
+        {
+            val2: 2,
             response: {
                 val5: 5
             }
@@ -32,12 +34,12 @@ export class Data {
         this.person.push(val)
         return of(this.person[0].response)
     }
-    public getFacility(val1: Number) {
-        this.facility.find(x => x.val1 === val1);
-        return of(this.facility[1].response);
+    public getFacility(val: Number) {
+        this.facility.find(x => x.val1 === val);
+        return of(this.facility[0].response);
     }
-    public getExposure(val2: Number) {
-        this.exposure.find(x => x.val2 === val2)
-        return of(this.exposure[1].response);
+    public getExposure(val: Number) {
+        this.exposure.find(x => x.val2 === val)
+        return of(this.exposure[0].response);
     }
 }
